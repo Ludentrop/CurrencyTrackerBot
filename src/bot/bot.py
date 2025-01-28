@@ -22,6 +22,11 @@ async def cmd_start(message: types.Message):
     await message.answer("Hello!")
 
 
+@dp.message(Command("dice"))
+async def cmd_dice(message: types.Message):
+    await message.answer_dice(emoji="🎲")
+
+
 async def main():
     await dp.start_polling(bot)
 
