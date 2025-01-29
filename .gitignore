@@ -1,1 +1,6 @@
+# Byte-compiled
+src/bot/__pycache__/
+
+
+# Environment
 .env
