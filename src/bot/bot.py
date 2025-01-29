@@ -1,14 +1,13 @@
-import os
-from dotenv import load_dotenv
 import logging
 import asyncio
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
 
+from config import settings
 
-load_dotenv()
 
-TOKEN = os.environ["TOKEN"]
+TOKEN = settings.TOKEN.get_secret_value()
+KEY = settings.KEY.get_secret_value()
 
 logging.basicConfig(level=logging.INFO)
 
